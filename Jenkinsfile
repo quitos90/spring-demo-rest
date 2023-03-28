@@ -17,6 +17,7 @@ pipeline {
 
         stage ('Install') {
             steps {
+                sh 'env'
                 sh 'mvn -Dmaven.test.failure.ignore=true install'
             }
         }
